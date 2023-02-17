@@ -1,3 +1,4 @@
+import clsx from "clsx";
 import { Suspense } from "react";
 import { Link, Route, Routes } from "react-router-dom";
 import { MainPage } from "./pages/MainPage/MainPage";
@@ -9,7 +10,7 @@ export const App = () => {
   const { theme, togleTheme } = useTheme();
 
   return (
-    <div className={`app ${theme}`}>
+    <div className={clsx("app", theme)}>
       <div>
         <Link to="/about">ABOUT</Link>
         <Link to="/">main</Link>
